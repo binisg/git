@@ -1,1 +1,40 @@
+:root {
+    box-sizing: border-box;
+}
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+main {
+    
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Clock Clock Clock"
+      "Decrease Reset Increase";
+    height: 100vh;
+    padding: 10em 20em;
+
+    #number { 
+        grid-area: Clock;
+        margin: 0 auto 25px;
+        font-size: 5em;
+    }
+    .btn1 { 
+        grid-area: Decrease; 
+    }
+    .btn2 {
+        grid-area: Reset; 
+        }
+    .btn3 {
+        grid-area: Increase; 
+    }
+}

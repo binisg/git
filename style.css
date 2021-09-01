@@ -1,0 +1,52 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "Clock Clock Clock" "Decrease Reset Increase";
+  height: 100vh;
+  padding: 10em 20em;
+}
+
+.container #number {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Clock;
+  margin: 0 auto 25px;
+  font-size: 5em;
+}
+
+.container .btn1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Decrease;
+}
+
+.container .btn2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: Reset;
+}
+
+.container .btn3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: Increase;
+}
+/*# sourceMappingURL=style.css.map */
