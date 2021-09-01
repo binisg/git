@@ -4,6 +4,8 @@
     align-items: center;
 }
 
+$font: 'Luckiest Guy', cursive;
+
 :root {
     box-sizing: border-box;
     font-size: 1em;
@@ -15,14 +17,38 @@
     box-sizing: inherit;
 }
 
+body {
+    font-family: $font;
+}
+
 .container {
     @extend %flexbox;
     flex-direction: column;
     height: 100vh;
 
+    #number {
+        font-size: 10rem;
+    }
+
     .buttons {
         @extend %flexbox;
         flex-direction: row;
         flex-wrap: wrap;
+
+        #btn1, #btn2, #btn3 {
+            font-family: $font;
+            padding: 1em 2em;
+            margin: 1em;
+            font-size: 1.1rem;
+            background-color: rgb(221, 33, 33);
+            color: white;
+            text-shadow: 0 0 3px rgb(104, 104, 104);
+            outline: none;
+            border: none;
+
+            &:hover {
+                background-color: rgb(179, 21, 21);
+            }
+        }
     }
 }

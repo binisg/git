@@ -23,12 +23,20 @@
           box-sizing: inherit;
 }
 
+body {
+  font-family: "Luckiest Guy", cursive;
+}
+
 .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+}
+
+.container #number {
+  font-size: 10rem;
 }
 
 .container .buttons {
@@ -38,5 +46,21 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.container .buttons #btn1, .container .buttons #btn2, .container .buttons #btn3 {
+  font-family: "Luckiest Guy", cursive;
+  padding: 1em 2em;
+  margin: 1em;
+  font-size: 1.1rem;
+  background-color: #dd2121;
+  color: white;
+  text-shadow: 0 0 3px #686868;
+  outline: none;
+  border: none;
+}
+
+.container .buttons #btn1:hover, .container .buttons #btn2:hover, .container .buttons #btn3:hover {
+  background-color: #b31515;
 }
 /*# sourceMappingURL=style.css.map */
