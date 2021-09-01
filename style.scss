@@ -1,5 +1,12 @@
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 :root {
     box-sizing: border-box;
+    font-size: 1em;
 }
 
 * {
@@ -8,33 +15,14 @@
     box-sizing: inherit;
 }
 
-main {
-    
-}
-
 .container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "Clock Clock Clock"
-      "Decrease Reset Increase";
+    @extend %flexbox;
+    flex-direction: column;
     height: 100vh;
-    padding: 10em 20em;
 
-    #number { 
-        grid-area: Clock;
-        margin: 0 auto 25px;
-        font-size: 5em;
-    }
-    .btn1 { 
-        grid-area: Decrease; 
-    }
-    .btn2 {
-        grid-area: Reset; 
-        }
-    .btn3 {
-        grid-area: Increase; 
+    .buttons {
+        @extend %flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
